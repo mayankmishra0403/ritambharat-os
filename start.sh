@@ -10,7 +10,7 @@ PROJECT=$(basename "$PWD")
 # Build custom Docker image with rbo app
 echo ""
 echo "[1/3] Building Docker image..."
-docker buildx build --load \
+docker build --no-cache \
   -t ritam-bharat-os:v1.0 \
   -f images/rbo.Dockerfile .
 echo "  ✅ Image built"
