@@ -28,22 +28,18 @@ def before_email_send(doc, method):
 
 def after_migrate():
     try:
-        ss = frappe.get_single('System Settings')
-        ss.app_name = 'Ritam Bharat OS'
-        ss.app_logo = '/assets/rbo/images/logo.png'
-        ss.save(ignore_permissions=True)
+        frappe.db.set_value("System Settings", "System Settings", "app_name", "Ritam Bharat OS")
+        frappe.db.set_value("System Settings", "System Settings", "app_logo", "/assets/rbo/images/logo.png")
     except Exception:
         frappe.log_error(frappe.get_traceback(), 'rbo.after_migrate.ss')
 
     try:
-        ws = frappe.get_single('Website Settings')
-        ws.app_name = 'Ritam Bharat OS'
-        ws.brand_html = '<img src="/assets/rbo/images/logo.png" style="max-height:28px;margin-right:8px;"><span style="font-weight:600;color:#fff;font-size:15px;">Ritam Bharat OS</span>'
-        ws.website_theme = 'Ritam Bharat Theme'
-        ws.app_logo = '/assets/rbo/images/logo.png'
-        ws.favicon = '/assets/rbo/images/logo.png'
-        ws.splash_image = '/assets/rbo/images/logo.png'
-        ws.save(ignore_permissions=True)
+        frappe.db.set_value("Website Settings", "Website Settings", "app_name", "Ritam Bharat OS")
+        frappe.db.set_value("Website Settings", "Website Settings", "brand_html", '<img src="/assets/rbo/images/logo.png" style="max-height:28px;margin-right:8px;"><span style="font-weight:600;color:#fff;font-size:15px;">Ritam Bharat OS</span>')
+        frappe.db.set_value("Website Settings", "Website Settings", "website_theme", "Ritam Bharat Theme")
+        frappe.db.set_value("Website Settings", "Website Settings", "app_logo", "/assets/rbo/images/logo.png")
+        frappe.db.set_value("Website Settings", "Website Settings", "favicon", "/assets/rbo/images/logo.png")
+        frappe.db.set_value("Website Settings", "Website Settings", "splash_image", "/assets/rbo/images/logo.png")
     except Exception:
         frappe.log_error(frappe.get_traceback(), 'rbo.after_migrate.ws')
 
