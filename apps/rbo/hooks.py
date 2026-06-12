@@ -28,3 +28,9 @@ after_migrate = ["rbo.api.after_migrate"]
 website_theme_scss = "rbo/public/scss/website"
 
 override_website_settings = "rbo.api.override_website_settings"
+
+website_context = dict(
+    favicon="/assets/rbo/images/logo.png",
+    splash_image="/assets/rbo/images/logo.png",
+    app_logo="/assets/rbo/images/logo.png",
+)
