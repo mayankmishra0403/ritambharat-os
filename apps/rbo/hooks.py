@@ -11,9 +11,9 @@ app_include_js = "/assets/rbo/js/rbo.js"
 web_include_css = "/assets/rbo/css/rbo.css"
 web_include_js = "/assets/rbo/js/rbo.js"
 
-app_logo_url = "/assets/rbo/images/logo.png"
-app_icon_url = "/assets/rbo/images/logo.png"
-favicon_url = "/assets/rbo/images/logo.png"
+app_logo_url = ["/assets/rbo/images/logo.png"]
+app_icon_url = ["/assets/rbo/images/logo.png"]
+favicon_url = ["/assets/rbo/images/logo.png"]
 
 boot_session = "rbo.api.boot_session"
 
