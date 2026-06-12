@@ -20,5 +20,9 @@ a[href*="erpnext.com"], a[href*="frappe.io"], a[href*="frappecloud.com"] { displ
 .about-frappe .table + p, .about-frappe p:last-of-type { display: none !important; }
 .about-frappe h4 { display: none !important; }
 .navbar .navbar-brand .mr-2 { width: 28px !important; height: 28px !important; object-fit: contain !important; }
-[data-label="ERPNext%20Settings"] { display: none !important; }
-[data-label="Frappe%20Support"] { display: none !important; }
+[data-label="ERPNext Settings"] { display: none !important; }
+[data-label="Frappe Support"] { display: none !important; }
+[data-label="About"][data-route*="about"] { display: none !important; }
+.module-item[data-label="Framework"] .module-link { font-size: 0 !important; }
+.module-item[data-label="Framework"] .module-link:after { content: "Platform" !important; font-size: 14px !important; }
+.sidebar-menu .module-link { color: #333 !important; }
