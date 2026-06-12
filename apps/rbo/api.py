@@ -31,7 +31,6 @@ def after_migrate():
         ss = frappe.get_single('System Settings')
         ss.app_name = 'Ritam Bharat OS'
         ss.app_logo = '/assets/rbo/images/logo.png'
-        ss.app_icon_url = '/assets/rbo/images/logo.png'
         ss.save(ignore_permissions=True)
     except Exception:
         frappe.log_error(frappe.get_traceback(), 'rbo.after_migrate.ss')
@@ -42,7 +41,6 @@ def after_migrate():
         ws.brand_html = '<img src="/assets/rbo/images/logo.png" style="max-height:28px;margin-right:8px;"><span style="font-weight:600;color:#fff;font-size:15px;">Ritam Bharat OS</span>'
         ws.website_theme = 'Ritam Bharat Theme'
         ws.app_logo = '/assets/rbo/images/logo.png'
-        ws.app_icon_url = '/assets/rbo/images/logo.png'
         ws.favicon = '/assets/rbo/images/logo.png'
         ws.splash_image = '/assets/rbo/images/logo.png'
         ws.save(ignore_permissions=True)
