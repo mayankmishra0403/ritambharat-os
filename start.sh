@@ -63,6 +63,9 @@ echo "  Installing platform..."
 create_site
 echo "  Installing app..."
 install_rbo
+echo "  Running migrations..."
+docker compose exec -T backend \
+  bench --site os.localhost migrate >/dev/null 2>&1
 echo "  Applying branding..."
 setup_branding
 
