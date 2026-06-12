@@ -1,0 +1,20 @@
+/* Ritam Bharat OS - Full Rebranding CSS */
+[data-page-route="erpnext-settings"] { display: none !important; }
+a[href*="erpnext.com"], a[href*="frappe.io"], a[href*="frappecloud.com"] { display: none !important; }
+.footer-powered { font-size: 0 !important; visibility: hidden !important; }
+.footer-powered:after { content: "Ritam Bharat OS v1.0" !important; font-size: 12px !important; visibility: visible !important; display: block !important; color: #999 !important; }
+.navbar { background: linear-gradient(135deg, #ff6b35 0%, #e63946 100%) !important; }
+.navbar .navbar-brand, .navbar .navbar-nav > li > a { color: white !important; }
+.navbar .navbar-brand img { max-height: 28px !important; }
+.page-card { border-radius: 12px !important; box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important; }
+.btn-primary { background: linear-gradient(135deg, #ff6b35 0%, #e63946 100%) !important; border: none !important; border-radius: 6px !important; }
+.btn-primary:hover { background: linear-gradient(135deg, #e65a2a 0%, #d12d3a 100%) !important; }
+.widget { border-radius: 12px !important; box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important; }
+.widget:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important; }
+.page-head { border-bottom: 2px solid #ff6b35 !important; }
+[data-desk-sidebar] { background: #f8f9fa !important; }
+.page-title h1, .page-title h2 { color: #1a1a2e !important; }
+.about-frappe .about-logo img { display: none !important; }
+.about-frappe .table { display: none !important; }
+.about-frappe .frappe-version-info { display: none !important; }
+.about-frappe .about-logo:after { content: "Ritam Bharat OS" !important; display: block !important; font-size: 24px !important; font-weight: bold !important; color: #ff6b35 !important; }
