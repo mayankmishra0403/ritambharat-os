@@ -25,12 +25,10 @@ docker compose -f compose.yaml \
   up -d
 echo "  ✅ Containers started"
 
-# Wait for backend to be ready
+# Wait for configurator and backend to be ready
 echo ""
-echo "[3/3] Creating site..."
-sleep 10
-
-BACKEND=$(docker compose ps -q backend 2>/dev/null || echo "")
+echo "[3/3] Setting up..."
+sleep 15
 
 create_site() {
   docker compose exec -T backend \
@@ -38,12 +36,12 @@ create_site() {
     --mariadb-root-password ritam@123 \
     --db-host db \
     --admin-password admin \
-    --install-app erpnext 2>/dev/null || true
+    --install-app erpnext >/dev/null 2>&1 || true
 }
 
 install_rbo() {
   docker compose exec -T backend \
-    bench --site os.localhost install-app rbo
+    bench --site os.localhost install-app rbo >/dev/null 2>&1
 }
 
 setup_branding() {
@@ -61,8 +59,11 @@ exit()
 EOF' | tail -1
 }
 
+echo "  Installing platform..."
 create_site
+echo "  Installing app..."
 install_rbo
+echo "  Applying branding..."
 setup_branding
 
 echo ""
