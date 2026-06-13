@@ -36,7 +36,6 @@ def after_migrate():
     try:
         frappe.db.set_value("Website Settings", "Website Settings", "app_name", "Ritam Bharat OS")
         frappe.db.set_value("Website Settings", "Website Settings", "brand_html", '<img src="/assets/rbo/images/logo.png" style="max-height:28px;margin-right:8px;"><span style="font-weight:600;color:#fff;font-size:15px;">Ritam Bharat OS</span>')
-        frappe.db.set_value("Website Settings", "Website Settings", "website_theme", "Ritam Bharat Theme")
         frappe.db.set_value("Website Settings", "Website Settings", "app_logo", "/assets/rbo/images/logo.png")
         frappe.db.set_value("Website Settings", "Website Settings", "favicon", "/assets/rbo/images/logo.png")
         frappe.db.set_value("Website Settings", "Website Settings", "splash_image", "/assets/rbo/images/logo.png")
