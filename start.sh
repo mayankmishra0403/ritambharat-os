@@ -63,10 +63,7 @@ echo "  Installing platform..."
 create_site
 echo "  Installing apps..."
 install_rbo
-echo "  Installing India Compliance..."
-docker compose exec -T backend \
-  bench --site os.localhost install-app india_compliance >/dev/null 2>&1 || true
-echo "  Running migrations..."
+  echo "  Running migrations..."
 docker compose exec -T backend \
   bench --site os.localhost migrate >/dev/null 2>&1
 echo "  Applying branding..."
